@@ -8,7 +8,7 @@ provider "aws" {
 
 resource "aws_instance" "web_app" {
   ami           = "ami-674cbc1e"
-  instance_type = "a1.large"
+  instance_type = "t3.large"
 }
 
 module "ec2_instance" {
@@ -18,7 +18,7 @@ module "ec2_instance" {
   name = "single-instance"
 
   ami                    = "ami-ebd02392"
-  instance_type          = "t2.micro"
+  instance_type          = "a1.large"
   key_name               = "user1"
   monitoring             = true
   vpc_security_group_ids = ["sg-12345678"]

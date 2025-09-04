@@ -8,7 +8,7 @@ provider "aws" {
 
 resource "aws_instance" "web_app" {
   ami           = "ami-674cbc1e"
-  instance_type = "t2.large"
+  instance_type = "a1.large"
 }
 
 module "ec2_instance" {
